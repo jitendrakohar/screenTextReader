@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#BC9999"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+
+                    android:id="@+id/imgbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/whattsapp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center_vertical|bottom"
+                    android:layout_marginTop="140dp"
+                    android:text="WHATSAPP"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="30sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flow_verticalAlign="bottom"
+                app:cardBackgroundColor="#FFC107"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                >
+
+
+                <ImageButton
+                    android:id="@+id/imgbutton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/instagram"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView"
+                    tools:layout_editor_absoluteX="12dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="bottom"
+                    android:text="Instagram"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="608dp" />
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/BPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_margin="10dp"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:text="Allow Permission"
+                app:layout_constraintTop_toBottomOf="parent"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
